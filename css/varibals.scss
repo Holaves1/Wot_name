@@ -1,0 +1,19 @@
+$var1: #ffffff;$var2: #D8E3FE;$var3: #5E81FE;$var4: #697CA6;$var5: #D2E1FF;$var6: #3A79FF;$var7: #3D4F9F;$var8: #8D96BD;$var9: #ffffff;$var10: #F5F8FF;$var11: #4C85FF;$var12: #D1D1E4;$var13: #ADB4D2;$var14: #4074F8;$var15: #ADB3CB;$var16: #FFD7D7;$var17: #D43F3F;$var18: #FFFFFF;$var19: #5E80FF;$var20: #A6B6DA;
+
+@mixin breakpoint($point) {
+    @if $point == lg {
+        @media (max-width: 992px) {@content;}
+    }
+    @else if $point == md {
+        @media (max-width: 768px) {@content;}
+    }
+    @else if $point == sm {
+        @media (max-width: 576px) {@content;}
+    }
+    @else if $point == xs {
+        @media (max-width: 500px) {@content;}
+    }
+    @else if $point == minlg {
+        @media (min-width: 993px) {@content;}
+    }
+}
